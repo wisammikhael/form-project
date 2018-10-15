@@ -51,7 +51,7 @@ input[type=submit]:hover {
 <h2>Contact Information</h2>
 
 <div class="container">
-  <form action="surveys/submitSurvey.php">
+  <form action="surveys/submitSurvey.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="545jk5fd_42">
 
     <label for="f_name">First Name</label>
@@ -71,11 +71,11 @@ input[type=submit]:hover {
     </select>
 
 	<label for="project_description">project description</label>
-    <textarea id="subject" name="subject" placeholder="describ your coding project.." style="height:200px"></textarea>
+    <textarea id="project_description" name="project_description" placeholder="describ your coding project.." style="height:200px"></textarea>
     
     <div class="file">
     <label for="screenshot">project screenshot</label>
-    <input type="file" id="fileupload" accept = "image/*" />
+    <input type="file" id="screenshot" name="fileupload" accept="image/*" />
     </div>
 
     <div class="radio">        
